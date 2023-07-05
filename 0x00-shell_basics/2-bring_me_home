@@ -1,0 +1,2 @@
+#!/bin/bash
+cd "$(awk -F: -v uid=$(id -u) '($3==uid) {print $6}' /etc/passwd)"
