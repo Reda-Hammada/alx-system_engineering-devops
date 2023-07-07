@@ -1,0 +1,10 @@
+#!/bin/bash
+src_dir=$(pwd)
+dest_dir=$(dirname $src_dir)
+for file in $src_dir/*.html; do
+    filename=$(basename $file)
+    if [ ! -e "$dest_dir/$filename" ] || [ "$file" -nt "$dest_dir/$filename" ]; then
+        cp -p "$file" "$dest_dir/$filename"
+    fi
+done
+
