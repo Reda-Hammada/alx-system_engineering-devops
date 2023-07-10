@@ -1,4 +1,4 @@
-# Shell learning
+# Shell Learning
 
 - Shell basics
 - Shell navigation
